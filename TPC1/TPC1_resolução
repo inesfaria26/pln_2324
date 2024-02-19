@@ -1,0 +1,33 @@
+filename = '../../TPC1/CHI Bilingual Medical Glossary R«English-Spanish.txt'
+
+file = open(filename)
+
+text = file.read()
+
+#remover pontuação
+text = text.replace('.', ' ')
+text = text.replace(',', ' ')
+text = text.replace('-', ' ')
+
+#dividir o texto em tokens 
+anagramas = {}
+t = text.split()
+tokens = t.lower()
+
+def anagrams (str1, str2):
+    s1 = str1.split().lower()
+    s2 = str2.split().lower()
+    sorted_s1 = sorted(''.join(s1))
+    sorted_s2 = sorted(''.join(s2))
+    return sorted (sorted_s1) == sorted(sorted_s2)
+
+def verificarAnagrama (tokens):
+    areAnagrams = []
+    for i in range (len(tokens)):
+        for j in range(i + 1, len(tokens)):
+            if anagrams(tokens[i], tokens[j]):
+                areAnagrams.append((tokens[i], tokens[j]))
+
+    return areAnagrams
+
+
