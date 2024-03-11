@@ -1,0 +1,457 @@
+
+
+
+body {
+    font-family: 'Helvetica Neue', Helvetica;
+    font-size: 18px;
+    color: #23395B;
+    position: relative;
+    background-color: #ffffff;
+    
+  }
+
+  body {
+    background-image: url("./images/Design\ sem\ nome.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    text-align: justify;
+
+  }
+
+  .navbar-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color: transparent;
+  }
+
+
+  p {
+    line-height: 1.5;
+    margin-top: 0px 0;
+    font-family: 'Helvetica Neue', Helvetica;
+  }
+  h1,h2,h3,h4,h5,h6 {
+    font-family: 'Helvetica Neue', Helvetica;
+    font-weight: 800;
+    color: #23395B;
+  }
+  a {
+    color: #51A3A3;
+  }
+  a:hover,
+  a:focus {
+    color: #ffffff;
+  }
+  blockquote {
+    color: #fff;
+    font-style: italic;
+  }
+  blockquote p:first-child {
+    margin-top: 0;
+  }
+  hr.small {
+    max-width: 100px;
+    margin: 15px auto;
+    border-width: 4px;
+    border-color: inherit;
+    border-radius: 3px;
+  }
+  
+  .main-content {
+    padding-top: 80px;
+  }
+  @media only screen and (min-width: 768px) {
+    .main-content {
+      padding-top: 130px;
+    }
+  }
+  
+  .main-explain-area {
+    font-family: 'Helvetica Neue', Helvetica;;
+    padding: 15px inherit;
+  }
+  
+  .hideme {
+    display: none;
+  }
+  
+  ::-moz-selection {
+    color: white;
+    text-shadow: none;
+    background-color:transparent;
+  }
+  ::selection {
+    color: white;
+    text-shadow: none;
+    background-color: transparent;
+  }
+  img::selection {
+    color: white;
+    background: transparent;
+  }
+  img::-moz-selection {
+    color: white;
+    background: transparent;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  .disqus-comments {
+    margin-top: 30px;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .disqus-comments {
+      margin-top: 40px;
+    }
+  }
+  
+  .linked-section {
+    padding-top: 60px;
+    margin-top: -25px;
+  }
+
+  /*Navbar*/
+  .navbar-default {
+    background-color: #23395B; /* Remove the blue background */
+    padding: 0!important;
+    border-radius: 10px; /* Rounded corners */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+
+  .navlinks-container {
+    position: relative; /* Position the container relatively */
+    display: inline-block;
+    color: white;
+
+    
+  }
+  
+  .navlinks-children {
+    position: absolute; /* Position the subtopics absolutely */
+    top: 100%; /* Position the subtopics below the main topics */
+    left: 0;
+    width: 100%;
+    background-color: #23395B; /* Add a light background color for readability */
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+    display: none; /* Initially hide the subtopics */
+    justify-content: center;
+    align-items: center;
+    flex-basis: calc(20% - 1rem);
+    margin-bottom: 20px;
+    
+  }
+
+
+  
+  .navlinks-container:hover .navlinks-children {
+    display: block; /* Show the subtopics when the main topic is hovered */
+    
+  }
+  
+  .navlinks-children a {
+    padding: 5px 15px; /* Add some padding to the subtopics for readability */
+    color: white;
+    display: block;
+    text-decoration: none;
+    margin: 0; /* Remove default margin */
+    font-size: 10px; /* Adjust font size */
+    
+  }
+
+  .button.navbar-toogle{
+    background-color:transparent
+
+  }
+ 
+
+  .navslinks-parent{
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem 1rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+  button {
+    appearance: auto;
+    /*font-style: ;
+    font-variation-settings: ;*/
+    text-rendering: auto;
+    color: white;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    box-sizing: border-box;
+    background-color:#23395B;
+    margin: 0em;
+    padding-block: 1px;
+    padding-inline: 6px;
+    border-style: none;
+    
+  }
+  
+  /* --- Post and page headers --- */
+  
+  .intro-header {
+    margin: 200px 0 0px;
+    position: relative;
+  }
+
+  .intro-header.page-heading {
+    text-align: center;
+    margin-top: 200px;
+  }
+
+  
+
+  @media only screen and (min-width: 768px) {
+    .navbar-custom .avatar-container {
+      position: absolute;
+      left: 38%;
+      max-width: 300px; /* Increase this value to make the image bigger */
+      height: auto; /* This will maintain the aspect ratio */
+      margin-top: 100px;
+    }
+  }
+
+  .intro-header.big-img .post-heading {
+    padding: 150px 0;
+    box-shadow: none; /* Remover a sombra */
+  }
+  .intro-header.big-img {
+    background: no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    margin-top: 51px; /* The small navbar is 50px tall + 1px border */
+    margin-bottom: 35px;
+  }
+  .intro-header.big-img  .big-img-transition {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    -webkit-transition: opacity 1s linear;
+    -moz-transition: opacity 1s linear;
+    transition: opacity 1s linear;
+  }
+  .intro-header .page-heading {
+    text-align: center;
+  }
+  .intro-header.big-img .page-heading,
+  .intro-header.big-img .post-heading {
+    padding: 100px 0;
+    color: #FFF;
+    text-shadow: 1px 1px 3px #000;
+  }
+  .intro-header .page-heading h1 {
+    margin-top: 300px;
+    font-size: 50px;
+  }
+  .intro-header .post-heading h1 {
+    margin-top: 0;
+    font-size: 35px;
+  }
+  .intro-header .page-heading .page-subheading,
+  .intro-header .post-heading .post-subheading {
+    font-size: 27px;
+    line-height: 1.1;
+    display: block;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    margin: 100px 0 0;
+  }
+  .intro-header .post-heading .post-subheading {
+    margin-bottom: 20px;
+  }
+  .intro-header.big-img .page-heading .page-subheading,
+  .intro-header.big-img .post-heading .post-subheading {
+    font-weight: 400;
+  }
+  .intro-header.big-img .page-heading hr {
+    box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    -moz-box-shadow: 1px 1px 3px #000;
+  }
+  .intro-header.big-img .post-heading .post-meta {
+    color: #EEE;
+  }
+  .intro-header.big-img .img-desc {
+    background: rgba(30, 30, 30, 0.6);
+    position: absolute;
+    padding: 5px 10px;
+    font-size: 11px;
+    color: #EEE;
+    font-family: 'Helvetica Neue', Helvetica;
+    right: 0;
+    bottom: 0;
+    display: none;
+  }
+  @media only screen and (min-width: 768px) {
+    .intro-header {
+      margin-top: 130px;
+    }
+    .intro-header.big-img {
+      margin-top: 91px;  /* Full navbar is small navbar + 20px padding on each side when expanded */
+    }
+    .intro-header.big-img .page-heading,
+    .intro-header.big-img .post-heading  {
+      padding: 150px 0;
+    }
+    .intro-header .page-heading h1 {
+      font-size: 80px;
+    }
+    .intro-header .post-heading h1 {
+      font-size: 50px;
+    }
+    .intro-header.big-img .img-desc {
+      font-size: 14px;
+    }
+  }
+  
+  .header-section.has-img .no-img {
+    margin-top: 0;
+    background-color: #FCFCFC;
+    margin: 0 0 40px;
+    padding: 20px 0;
+    box-shadow: 0 0 5px #AAA;
+  }
+  /* Many phones are 320 or 360px, so make sure images are a proper aspect ratio in those cases */
+  .header-section.has-img .intro-header.no-img {
+    display: none;
+  }
+  @media only screen and (max-width: 365px) {
+    .header-section.has-img .intro-header.no-img {
+      display: block;
+    }
+    .intro-header.big-img {
+      width: 100%;
+      height: 220px;
+    }
+    .intro-header.big-img .page-heading,
+    .intro-header.big-img .post-heading {
+      display: none;
+    }
+    .header-section.has-img .big-img {
+      margin-bottom: 0;
+    }
+  }
+  @media only screen and (max-width: 325px) {
+    .intro-header.big-img {
+      height: 200px;
+    }
+  }
+  
+  .caption {
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+    font-style: italic;
+    margin: 0;
+    display: block;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  
+  #header-gh-btns {
+    margin-bottom: 15px;
+  }
+  @media only screen and (max-width: 500px) {
+    #header-gh-btns > iframe {
+      display: block;
+      margin-bottom: 5px;
+    }
+  }
+
+
+
+@media screen and (min-width: 768px){
+  .container .jumbotron, .container-fluid .jumbotron {
+      padding-right: 60px;
+      padding-left: 60px;
+      font-family: 'Helvetica Neue', Helvetica;
+  }
+}
+  .container .jumbotron, .container-fluid .jumbotron {
+    border-radius: 6px;
+  }
+
+/* footer */
+
+@media only screen and (min-width: 768px){
+
+  footer {
+    padding: 50px 0;
+  }
+}
+
+footer {
+  padding: 30px 0;
+  border-top: 1px #EAEAEA solid;
+  margin-top: 50px;
+  font-size: 14px;
+  background-color: #23395B;
+  border-radius: 10px;
+  }
+
+  article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+    display: block;
+} 
+
+:after, :before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Interests */
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery-item {
+  margin: 10px;
+  text-align: center;
+}
+
+.gallery-item img {
+  max-width: 100%;
+  max-height: 300px;
+  height: auto;
+}
+
+
+
+.gallery-item p {
+  margin-top: 5px;
+}
+
+
+
