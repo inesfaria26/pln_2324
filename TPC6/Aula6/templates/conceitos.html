@@ -1,0 +1,87 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<h1> Conceitos Médicos </h1>
+<hr>
+<script>
+  function filterWords(words, prefix) {
+  const trie = new Trie();
+  words.forEach(word => trie.insert(word));
+
+  const filteredWords = [];
+  for (let word of words) {
+    if (trie.startsWith(prefix)) {
+      filteredWords.push(word);
+    }
+  }
+  return filteredWords;
+}
+
+  function updateWordsList(words) {
+    const wordsList = document.querySelector('.list-group');
+    wordsList.innerHTML = '';
+    words.forEach(word => {
+      const listItem = document.createElement('li');
+      listItem.classList.add('list-group-item', 'word-link');
+      listItem.setAttribute('data-word', word);
+      listItem.textContent = word;
+      wordsList.appendChild(listItem);
+    });
+  }
+
+</script>
+{% if conceitos %}
+  <section class="py-5">
+    <div class="container px-5">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="filterWords(['A', 'B', 'C'])">A-C</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="filterWords(['D', 'E', 'F'])">D-F</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="filterWords(['G', 'H', 'I'])">G-I</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="filterWords(['J', 'K', 'M'])">J-M</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="filterWords(['N', 'O', 'P'])">N-P</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="filterWords(['Q', 'R', 'S'])">Q-S</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="filterWords(['T', 'U', 'V'])">T-U</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="filterWords(['W', 'X', 'Y', 'Z'])">W-Z</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <br>
+
+    <div id="wordsContainer" class="btn-group-horizontal">
+
+      {% for conceito in conceitos %}
+        <a href="{{ url_for('consultar_conceitos', designacao=conceito) }}">
+          <button type="button" class=" btn btn-outline-dark">
+            {{ conceito }}
+          </button>
+        </a>
+      {% endfor %}
+    </div>
+  </section>
+
+  {% endif %}
+
+{% endblock %}
