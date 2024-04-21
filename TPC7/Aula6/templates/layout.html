@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+              rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
+    </head>
+    <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+      <div class="container-fluid">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+            <a class="nav-link" href="/conceitos">Conceitos</a>
+            <form id="searchForm">
+              <input type="text" id="search" name="q" required>
+              <button type="submit">Search</button>
+          </form>
+          <script>
+            document.getElementById('searchForm').addEventListener('submit', function(event) {
+                event.preventDefault(); // Evita que o formulário seja enviado normalmente
+            
+                // Obtém o valor do campo de pesquisa
+                var searchTerm = document.getElementById('search').value;
+            
+                // Redireciona para a página correspondente ao termo de pesquisa
+                if (searchTerm === 'conceitos') {
+                    window.location.href = '/conceitos'; // Redireciona para conceitos.html
+                } else if (searchTerm === 'Conceitos') {
+                    window.location.href = '/conceitos'; // Redireciona para conceitos.html
+                } else {
+                  window.location.href = 'http://localhost:4002/'; // Mostra um alerta se o termo de pesquisa não for reconhecido
+                }
+            });
+            </script>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+
+
+        <div class="m-5 p-3">
+        {% block body %}
+        {% endblock %}
+        </div>
+
+    <footer>
+        <div class="pt-2 px-5 bg-dark fixed-bottom text-light">
+            <p class="fs-7"> 2024. Processamento de Linguagem Natural em Engenharia Biomédica.</p>
+        </div>
+    </footer>
+  
+    </body>
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/2.0.3/js/dataTables.js"></script>
+<script src="/static/scripts/scripts_2.js"></script>

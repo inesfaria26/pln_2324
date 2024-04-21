@@ -1,0 +1,75 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<center>
+    <h2>Bem vindo ao Dicionário de Conceitos Médicos da aula da UC de PLN. </h2>
+</center>
+
+<p> Neste sexto trabalho de casa, o objetivo principal é desenvolver páginas web que permitam apresentar conceitos médicos de um dicionário de forma interativa e intuitiva, com a sua devida designação. </p>
+
+<p> Deste modo, são apresentadas os devidos conceitos, assim como as suas designações e traduções. </p>
+<hr>
+
+<div class="px-4 py-5 my-5 text-center">
+  <img class="d-block mx-auto mb-4" src="/static/imagens/EEUM_eng.png" alt="">
+  <h1 class="display-5 fw-bold">Dicionário de Conceitos Médicos</h1>
+  <div class="col-lg-6 mx-auto">
+    <p class="lead mb-4">Este dicionário foi criado nas aulas de Processamento de Linguagem Natural em Engenharia Biomédica, com o intuito de disponibilizar vários conceitos médicos, incluindo as suas definições e traduções em várias línguas.</p>
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+      <a href="/conceitos" class="btn btn-secondary mt-3">Conceitos</a>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<center>
+    <h5> Sobre a Unidade Curricular de Processamento de Linguagem Natural </h5>
+</center>
+<figure>
+    <blockquote class="blockquote">
+      <p> Natural language processing (NLP) is concerned with giving computer program the ability to understand human language as it is spoken and written -- referred to as natural language. </p>
+    </blockquote>
+    <figcaption class="blockquote-footer">
+      Definição de conceito de processamento de linguagem natural.  <cite title="Source Title">Aula 1 <em>PowerPoint</em></cite>
+    </figcaption>
+</figure>
+<p class="justified"> A PNL usa muitas técnicas diferentes para permitir que os computadores entendam a linguagem natural como os humanos. Quer a linguagem seja falada ou escrita, o processamento de linguagem natural pode usar a IA para a entrada do mundo real, processá-la e transformar em linguagem que um computador possa entender. Assim como os humanos têm diferentes sensores -- como ouvidos para ouvir e olhos para ver -- os computadores têm programas para ler e microfones para receber áudio. E assim como os seres humanos têm um cérebro para processar essa entrada, os computadores têm um programa para o processamento das respetivas entradas. Em algum momento do processamento, a entrada é convertida em código que o computador pode entender.
+
+</p>
+<br>
+<h3>Curiosidades </h3>
+<br>
+<ol class="list-group list-group-numbered">
+    <li class="list-group-item d-flex justify-content-between align-items-start">
+      <div class="ms-2 me-auto">
+        <div class="fw-bold">Evolução Histórica</div>
+        Os primeiros programas de tradução automática e análise de linguagem surgiram nas décadas de 1950 e 1960, mas o campo do PLN remonta a isso. Com os avanços na computação e na inteligência artificial, o PLN aumentou muito desde então.
+      </div>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-start">
+      <div class="ms-2 me-auto">
+        <div class="fw-bold">Ambiguidade Linguística</div>
+        Lidar com a ambiguidade da linguagem natural é uma das maiores dificuldades no PLN. Dependendo do contexto, palavras e frases podem ter vários significados, o que dificulta a compreensão automatizada.
+      </div>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-start">
+      <div class="ms-2 me-auto">
+        <div class="fw-bold">Aplicações Práticas</div>
+        Sistemas de reconhecimento de fala, chatbots, tradução automática, sumarização de texto, análise de sentimentos em mídias sociais são algumas das muitas aplicações práticas do PLN.
+      </div>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-start">
+        <div class="ms-2 me-auto">
+          <div class="fw-bold"><em>Deep Learning</em></div>
+          O PLN foi transformado por avanços recentes em redes neurais profundas (aprendizado profundo). Modelos como o BERT e o GPT podem realizar tarefas impressionantes de linguagem natural, como tradução e geração de texto.
+        </div>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-start">
+        <div class="ms-2 me-auto">
+          <div class="fw-bold">Diversidade Linguística</div>
+          A PLN enfrenta grandes dificuldades ao lidar com a diversidade linguística. Muitas línguas têm estruturas gramaticais e vocabulários distintos, por isso são necessárias abordagens e dados linguísticos específicos.        </div>
+    </li>
+  </ol>
+
+{% endblock %}

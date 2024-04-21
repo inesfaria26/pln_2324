@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+
+{% block body %}
+
+    <div class="bs-secondary-color text-opacity-100  shadow p-2 mb-4 bg-body-tertiary rounded" >
+        <h1 class="px-4" style="color:dimgray" > Conceito - {{designacao}} </h1>
+    </div>
+
+    <div class="bs-secondary-color text-opacity-100">
+        <h4> Portugês:  </h4><p>{{desig_pt}}</p>
+        <hr>
+        <h4> Inglês:  </h4><p>{{desig_en}} </p>
+
+        {% if desig_fr %}
+            <hr>
+            <h4> Francês: </h4><p>{{ desig_fr }}</p>
+    
+        {% endif %}
+        {% if desig_es %}
+            <hr>
+            <h4> Espanhol: </h4><p>{{ desig_es }} </p>
+        {% endif %}
+        {% if desig_de %}
+            <hr>
+            <h4> Alemão: </h4><p>{{ desig_de }} </p>
+        {% endif %}
+
+    </div>
+    <br>
+    <a  class=" btn btn-outline-dark" href="/conceitos" role = "button">Retroceder</a>
+   
+{% endblock %}
+
+
+
