@@ -1,0 +1,49 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="container text-center py-5">
+    
+    <h1 class="display-5 fw-bold">Extração e Visualização de Conceitos Médicos</h1>
+    <div class="col-lg-8 mx-auto">
+        <p class="lead mb-4">Esta plataforma web foi desenvolvida no âmbito da disciplina de Processamento de Linguagem Natural, com o objetivo de disponibilizar vários conceitos médicos, de fontes de dados distintas.</p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <a href="/conceitos" class="btn custom-btn btn-lg px-4 gap-3">Conceitos</a>
+            <a href="/sobrenos" class="btn custom-btn btn-lg px-4 gap-3">Sobre Nós</a>
+            <a href="/contactos" class="btn custom-btn btn-lg px-4 gap-3">Contactos</a>
+        </div>
+    </div>
+</div>
+
+<style>
+    body {
+        background: url('/static/imagens/x.jpg') no-repeat center center fixed;
+        background-size: cover;
+        color: #fff;
+    }
+
+    .container {
+        max-width: 900px;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    .btn.custom-btn {
+        padding: 12px 25px;
+        border: 2px solid #ADD8E6;
+        background-color: #ADD8E6;
+        color: #ffffff;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .btn.custom-btn:hover {
+        transform: translateY(-10px); 
+        background-color: #ffffff;
+        color: #ADD8E6;
+        box-shadow: 0 0 10px rgba(0, 100, 0, 0.3);
+    }
+</style>
+
+{% endblock %}
